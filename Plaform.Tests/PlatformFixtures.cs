@@ -15,7 +15,7 @@ namespace Plaform.Tests
         {
             var platformFactory = new PlatformFactory();
             var platform = platformFactory.GetPlatform(platformName);
-            platform.Message().Equals(string.Format(KeyStore.Message, KeyStore.Android));
+            Assert.Equal(platform.Message(), string.Format(KeyStore.Message, platformName));
         }
 
         [Fact]
@@ -24,7 +24,6 @@ namespace Plaform.Tests
             var platformFactory = new PlatformFactory();
             var platform = platformFactory.GetPlatform(KeyStore.Ios);
             Assert.NotNull(platform);
-
         }
 
         [Fact]

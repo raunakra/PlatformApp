@@ -10,7 +10,7 @@ namespace PlatformApp
     {
         public string Message()
         {
-            return string.Format(KeyStore.Message, KeyStore.Windows);
+            return string.Format(KeyStore.Message, KeyStore.Android);
         }
     }
 }
